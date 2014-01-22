@@ -37,7 +37,7 @@ describe Item do
     expect(item).to_not be_valid
   end
 
-  it "The photo is optional. If present it must be a valid URL format." do
+ it "The photo is optional. If present it must be a valid URL format." do
 
   end
 end
