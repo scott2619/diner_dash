@@ -13,10 +13,9 @@ describe Item do
 	it { should respond_to(:description) }
   it { should respond_to(:price) }
   it { should respond_to(:photo) }
-
+  it { should validate_numericality_of(:price) }
   it { should validate_uniqueness_of(:title)}
-
-
+  it { should validate_numericality_of(:price).is_greater_than(0) }
 
   it "title cannot be empty" do
     item = Item.new(title:"",description:"This has no title")
@@ -28,7 +27,12 @@ describe Item do
     expect(item).to_not be_valid
   end
 
-  it "The price must be a valid decimal numeric value and greater than zero" do
+  it "The price must greater than zero" do
+    item = Item.new(description:"This should not be valid",title:"Valid numeric but value less than 0",price: -20)
+    expect(item).to_not be_valid
+  end
+
+  it "The price must be valid numeric value" do
     item = Item.new(description:"This should not be valid",title:"Valid numeric but value less than 0",price: -20)
     expect(item).to_not be_valid
   end
