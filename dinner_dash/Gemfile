@@ -31,7 +31,7 @@ group :test do
   gem "faker", "~> 1.2.0"
 
   gem 'cucumber-rails', '1.4.0', :require => false
-  gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  gem 'database_cleaner'
  
 end
 group :test do
