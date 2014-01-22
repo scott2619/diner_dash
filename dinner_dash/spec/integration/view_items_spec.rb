@@ -6,7 +6,20 @@ feature "Unauthenticated Users" do
 		item = create(:item)
 		expect(page).to have_content item.title
 	end
-	scenario "Browse items by category"
+
+	scenario "can see all the categories" do
+		visit root_path
+    category1 = create(:category,name:"Electronics")
+    category2 = create(:category,name:"Videos")
+    expect(page).to have_content category1.name
+    expect(page).to have_content category2.name
+	end
+	scenario "Browse items by category" do
+		category = create(:category,name:"Electronics")
+    visit root_path
+    click_link "Electronics"
+    expect(page).to have_content category.item.title
+  end
   scenario "Add an item to my cart"
   scenario "View my cart"
   scenario "Remove an item from my cart"
