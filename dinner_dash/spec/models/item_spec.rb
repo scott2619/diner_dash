@@ -2,16 +2,17 @@ require 'spec_helper'
 
 describe Item do
 
-	before do
-		@item =  Item.new(title:'This has a description',
+  before do
+    @item =  Item.new(title:'This has a description',
       description:'This has a title', price: 9.99)
-	end
+  end
 
-	it 'item should be valid if title and description are present' do
+  it 'item should be valid if title and description are present' do
     expect(@item).should be_valid
-	end
-	it { should respond_to(:title) }
-	it { should respond_to(:description) }
+  end
+
+  it { should respond_to(:title) }
+  it { should respond_to(:description) }
   it { should respond_to(:price) }
   it { should respond_to(:photo) }
   it { should validate_numericality_of(:price) }
