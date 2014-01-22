@@ -39,7 +39,6 @@ group :test do
   gem "poltergeist", "~> 1.4.1"
   gem 'shoulda-matchers'
 end
-gem 'unicorn'
 gem 'newrelic_rpm'
 gem 'sass-rails', '4.0.1'
 gem 'uglifier', '2.1.1'
@@ -52,6 +51,6 @@ group :doc do
 end
 gem 'pg', '0.15.1'
 group :production do
-  
+  gem 'unicorn'
   gem 'rails_12factor', '0.0.2'
 end
