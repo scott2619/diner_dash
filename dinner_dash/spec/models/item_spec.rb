@@ -20,8 +20,8 @@ it { should respond_to(:title) }
     @item = Item.new(title:"A",description:"B",price: 1)
   end
   context 'invalid input' do
-    it 'should return false for a poorly formed URL' do
-      @item.should_not be_valid
+    it 'should be valid if there is no photo' do
+      @item.should be_valid
     end
  
     it 'should return false for garbage input' do
