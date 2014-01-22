@@ -5,4 +5,5 @@ class Item < ActiveRecord::Base
   validates :price, numericality: true
   validates_numericality_of :price, greater_than: 0
   validates :title, :description, :price, presence: true
+  validates :photo, url: true
 end
