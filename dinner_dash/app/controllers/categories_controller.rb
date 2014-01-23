@@ -5,6 +5,6 @@ class CategoriesController < ApplicationController
   end
 
   def index
-  	@categories = Category.all.includes(:items)
+  	@categories = Category.includes(:items)
   end
 end
