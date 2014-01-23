@@ -2,15 +2,15 @@ require "spec_helper"
 
 feature "Unauthenticated Users" do
 	scenario "can view all the items" do
-		visit root_path
 		item = create(:item)
+		visit root_path
 		expect(page).to have_content item.title
 	end
 
 	scenario "can see all the categories" do
-		visit root_path
     category1 = create(:category,name:"Electronics")
     category2 = create(:category,name:"Videos")
+		visit root_path
     expect(page).to have_content category1.name
     expect(page).to have_content category2.name
 	end
