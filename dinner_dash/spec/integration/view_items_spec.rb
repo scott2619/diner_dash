@@ -48,7 +48,7 @@ feature "Unauthenticated Users" do
     item = create(:item)
     visit root_path
     click_link "Add to cart."
-    fill_in "Number",with:"2"
+    fill_in "Quantity",with:"2"
     click_link "Update"
     expect(page).to have_content "2"
   end
