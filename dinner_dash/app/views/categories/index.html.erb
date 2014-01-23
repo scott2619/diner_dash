@@ -1,0 +1,11 @@
+<%= link_to "View Cart.", "#" %>
+
+<% @categories.each do |category| %>
+ <%= category.items.each do |item| %>
+  <%= item.title %> <%= link_to "Add to cart." %>
+<% end %>
+<% end %>
+
+<% @categories.each do |category| %>
+  <%= link_to category.name, category_path(category) %>
+<% end %>
