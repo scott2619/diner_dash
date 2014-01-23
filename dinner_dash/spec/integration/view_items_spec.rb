@@ -53,5 +53,8 @@ feature "Unauthenticated Users" do
     expect(page).to have_content "2"
   end
 
-  scenario "Log in, which should not clear the cart"
+  scenario "Log in, which should not clear the cart",pending: true do
+    visit root_path
+    click_link "Sign in."
+  end
 end
