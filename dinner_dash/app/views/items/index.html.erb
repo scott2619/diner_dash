@@ -1,7 +1,7 @@
 <%= link_to "View Cart.", "#" %>
 
 <% @items.each do |item| %>
-  <%= item.title %>
+  <%= item.title %> <%= link_to "Add to cart." %>
 <% end %>
 
 <% @categories.each do |category| %>
