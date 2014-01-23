@@ -1,4 +1,5 @@
 class Item < ActiveRecord::Base
+  belongs_to :category
   validates :title, uniqueness: true
   validates :title, length: {minimum: 1}
   validates :description, length: {minimum: 1}

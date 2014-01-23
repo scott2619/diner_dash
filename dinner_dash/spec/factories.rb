@@ -8,6 +8,5 @@ FactoryGirl.define do
 
 	factory :category do
 	  name "Electronics"
-	  item 
   end
 end
