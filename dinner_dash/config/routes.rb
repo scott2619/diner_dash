@@ -1,3 +1,3 @@
 DinnerDash::Application.routes.draw do
- root to:'high_voltage/pages#show', id: 'home'
+ root to: 'items#index'
 end

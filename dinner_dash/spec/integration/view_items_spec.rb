@@ -1,12 +1,13 @@
 require "spec_helper"
 
 feature "Unauthenticated Users" do
-	scenario "can view all the items" do
-		visit root_path
-		item = create(:item)
-		expect(page).to have_content item.title
-	end
-	scenario "Browse items by category"
+  scenario "can view all the items" do
+    item = create(:item)
+    visit root_path
+    expect(page).to have_content item.title
+  end
+
+  scenario "Browse items by category"
   scenario "Add an item to my cart"
   scenario "View my cart"
   scenario "Remove an item from my cart"
