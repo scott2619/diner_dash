@@ -4,10 +4,10 @@ FactoryGirl.define do
     description "Electronics"
     price 2000
     photo "http://www.google.com"
+    category
 	end
 
 	factory :category do
 	  name "Electronics"
-	  item 
-  end
+	end
 end
